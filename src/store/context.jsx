@@ -86,10 +86,11 @@ export const ToDOProvider = ({ children }) => {
   }, [todos]);
 
   const addToDo = ({ title, id }) => {
+    console.log(title.trim());
     dispatch({
       type: 'ADD_TODO',
       payload: {
-        title,
+        title: title.trim(),
         id,
       },
     });
@@ -113,7 +114,6 @@ export const ToDOProvider = ({ children }) => {
   };
 
   const editToDo = (id) => {
-    console.log(id);
     const todo = todos.find((todo) => todo.id === id);
     setToDoItem({ title: todo.title, id });
   };
