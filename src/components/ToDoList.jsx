@@ -5,14 +5,20 @@ const ToDoList = () => {
   const { todos } = useToDoContext();
 
   if (todos.length < 1) {
-    return null;
+    return (
+      <section className='section'>
+        <p className='default-info'>
+          Kindly add To Do items to get started....
+        </p>
+      </section>
+    );
   }
   return (
-    <div className='section'>
+    <section className='section'>
       {todos.map((todo) => {
         return <ToDoSingleItem key={todo.id} {...todo} />;
       })}
-    </div>
+    </section>
   );
 };
 export default ToDoList;

@@ -277,7 +277,10 @@ ul {
 }
 
 /* custom CSS  */
-
+.header {
+  background: var(--primary-200);
+  padding: 1.5rem 1rem;
+}
 .todo-form {
   width: 70%;
   border-top-right-radius: 0;
@@ -303,7 +306,10 @@ ul {
 .section:hover {
   box-shadow: var(--shadow-4);
 }
-
+.default-info {
+  text-align: center;
+  letter-spacing: var(--letter-spacing);
+}
 .todo-item {
   display: grid;
   grid-template-columns: 1fr 25%;
